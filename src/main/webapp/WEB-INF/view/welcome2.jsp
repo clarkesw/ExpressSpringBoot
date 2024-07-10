@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
 <html>
@@ -15,16 +14,12 @@
     </head>
     <body>
         <h1>Hello ${name}</h1>
-        <form:form action="note-submit" modelAttribute="note">
-            Enter Note: <form:input type="text" path="title"/>
+        <form action="submit-form" method = "POST">
+            Enter Note: <input type="text" name="title" value="${note.title}">
             <br><br>
-            Enter Note: <form:textarea name="data" rows="4" cols="25" path="data"/>
+            Enter Note: <textarea name="data" rows="4" cols="25">${note.data}</textarea>
             <br><br>
-            <input type="submit" value="Send It!!"/>
-        </form:form>
-           
-        <a href="/note-get-all">See Notes!!</a>
- 
+            <input type="submit" value="Send It!!">
+        </form>
     </body>
 </html>
-

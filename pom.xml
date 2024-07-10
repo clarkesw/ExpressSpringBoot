@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.express.mvc</groupId>
-    <artifactId>MVC</artifactId>
+    <artifactId>ExpressSpringBoot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     
@@ -36,15 +36,10 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>        
-     <!--   <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-jasper</artifactId>
-            <version>9.0.19</version>
-        </dependency> -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
+            <version>10.1.7</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
