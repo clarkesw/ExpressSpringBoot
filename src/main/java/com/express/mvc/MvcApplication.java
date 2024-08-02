@@ -9,9 +9,9 @@ public class MvcApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(MvcApplication.class, args);
-        String[] names = context.getBeanDefinitionNames();
-
-        for(String name: names)
-            System.out.println("~~~ " + name);
+//        String[] names = context.getBeanDefinitionNames();
+//
+//        for(String name: names)
+//            System.out.println("~~~ " + name);
     }
 }

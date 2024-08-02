@@ -1,38 +1,16 @@
 package com.express.mvc.model;
 
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.ToString;
 
+@Data
+@ToString
+@AllArgsConstructor
 public class Note {
+    
+    @NotBlank
     private String title;
     private String data;
-    
-    public Note() {
-        this.title = "Add Title";
-        this.data = "Add Note Data";
-    }
-
-    public Note(String title, String data) {
-        this.title = title;
-        this.data = data;
-    }
-    
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
-
-    @Override
-    public String toString() {
-        return "Note{" + "title=" + title + ", data=" + data + '}';
-    }
 }
