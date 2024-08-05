@@ -13,9 +13,12 @@ public class NoteTrackerDAOImpl implements NoteTrackerDAO{
     @Autowired
     JdbcTemplate jdbcTemplate;
     
+    public NoteTrackerDAOImpl(){}
+    
     @Override
     public void saveNote() {
         String sql = "insert into notes values(1,\"Stop\",\"aaaaaaaaaaaaaaaa\")";
         jdbcTemplate.update(sql);
+        log.info("Good insertion.");
     }
 }

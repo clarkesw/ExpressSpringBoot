@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class NoteTrackerController {
-    private NoteTrackerService noteTrackerService;
+    private final NoteTrackerService noteTrackerService;
 
     public NoteTrackerController(NoteTrackerService noteTrackerService) {
         this.noteTrackerService = noteTrackerService;
