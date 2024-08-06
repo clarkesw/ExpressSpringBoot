@@ -3,9 +3,10 @@ package com.express.mvc.dao;
 import com.express.mvc.model.Note;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
-
-public class NoteDAOImpl implements NoteDAO {
+@Repository
+public class NoteDAOImpl implements NoteDAO2 {
 
     ArrayList<Note> noteList = new ArrayList<>();
 

@@ -1,15 +1,15 @@
 package com.express.mvc.service;
 
-import com.express.mvc.dao.NoteDAO;
+import com.express.mvc.dao.NoteDAO2;
 import com.express.mvc.model.Note;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
 public class NoteTrackerServiceImpl implements NoteTrackerService {
-    private NoteDAO noteDAO;
+    private final NoteDAO2 noteDAO;
 
-    public NoteTrackerServiceImpl(NoteDAO noteDAO) {
+    public NoteTrackerServiceImpl(NoteDAO2 noteDAO) {
         this.noteDAO = noteDAO;
     }
 
@@ -20,9 +20,8 @@ public class NoteTrackerServiceImpl implements NoteTrackerService {
 
     @Override
     public List<Note> findAll() {
-        //dao call
         List<Note> allNote = noteDAO.findAll();
-        //client need 
+
         allNote.forEach(note -> note.setTitle(note.getTitle().toUpperCase()));
         return allNote;
     }    

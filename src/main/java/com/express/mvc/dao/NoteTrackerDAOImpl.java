@@ -17,7 +17,7 @@ public class NoteTrackerDAOImpl implements NoteTrackerDAO{
     
     @Override
     public void saveNote() {
-        String sql = "insert into notes values(1,\"Stop\",\"aaaaaaaaaaaaaaaa\")";
+        String sql = "insert into notes values(2,\"Go\",\"ssssssssssssss\")";
         jdbcTemplate.update(sql);
         log.info("Good insertion.");
     }
