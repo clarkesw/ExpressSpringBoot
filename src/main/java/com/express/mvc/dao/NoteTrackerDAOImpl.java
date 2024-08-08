@@ -1,5 +1,7 @@
 package com.express.mvc.dao;
 
+import com.express.mvc.model.Note;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,8 +16,15 @@ public class NoteTrackerDAOImpl implements NoteTrackerDAO{
     JdbcTemplate jdbcTemplate;
     
     @Override
-    public void saveNote() {
+    public void saveNote(Note note) {
         String sql = "insert into notes values(1,\"Stop\",\"aaaaaaaaaaaaaaaa\")";
         jdbcTemplate.update(sql);
     }
+
+    @Override
+    public List<Note> findAll() {
+        return null;
+    }
+    
+    
 }

@@ -1,21 +1,22 @@
 package com.express.mvc.service;
 
-import com.express.mvc.dao.NoteDAO;
+import com.express.mvc.dao.NoteDao;
+import com.express.mvc.dao.NoteTrackerDAO;
 import com.express.mvc.model.Note;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
 public class NoteTrackerServiceImpl implements NoteTrackerService {
-    private NoteDAO noteDAO;
+    private NoteTrackerDAO noteDAO;
 
-    public NoteTrackerServiceImpl(NoteDAO noteDAO) {
+    public NoteTrackerServiceImpl(NoteTrackerDAO noteDAO) {
         this.noteDAO = noteDAO;
     }
 
     @Override
     public void save(Note note) {
-        noteDAO.save(note);
+        noteDAO.saveNote(note);
     }
 
     @Override
