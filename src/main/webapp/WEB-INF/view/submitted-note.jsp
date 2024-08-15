@@ -21,7 +21,7 @@
             <h3>
                 My Note: ${note.title}
                 <br><br><br><!-- comment -->
-                ${note.data}
+                ${note.details}
             </h3>            
         </center>
             

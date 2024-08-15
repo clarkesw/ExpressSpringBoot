@@ -17,7 +17,7 @@
         <form action="submit-form" method = "POST">
             Enter Note: <input type="text" name="title" value="${note.title}">
             <br><br>
-            Enter Note: <textarea name="data" rows="4" cols="25">${note.data}</textarea>
+            Enter Note: <textarea name="details" rows="4" cols="25">${note.details}</textarea>
             <br><br>
             <input type="submit" value="Send It!!">
         </form>

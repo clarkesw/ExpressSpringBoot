@@ -19,7 +19,7 @@
             <h3>
                 ${notes}
           <%--      <c:forEach var="note" items="${notes}" >
-                    ${note.title} - ${note.data} 
+                    ${note.title} - ${note.details} 
                     <br><br>
                 </c:forEach> --%>
             </h3>            
