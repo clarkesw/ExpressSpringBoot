@@ -14,5 +14,5 @@ public class Note {
     
     @NotBlank
     private String title;
-    private String data;
+    private String details;
 }

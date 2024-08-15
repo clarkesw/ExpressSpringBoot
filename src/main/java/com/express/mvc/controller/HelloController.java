@@ -34,14 +34,5 @@ public class HelloController {
     public String getMessages(Model mod){
   //      mod.addAttribute("name", "Clarkie");
         return "first";
-    }    
-    
-    @ModelAttribute()
-    @RequestMapping(value = "/insert/{title}/{data}")
-    @ResponseBody
-    public String handleRequester(@PathVariable String title, @PathVariable String data, Model mod) {
-        mod.addAttribute("name","Cake Man");
-        String str = title + "  " + data;
-        return str;
-    }    
+    }      
 }
